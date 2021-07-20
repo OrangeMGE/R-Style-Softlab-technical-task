@@ -1,13 +1,17 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
+    <button ion-button menuToggle side="start">
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Гостиницы</ion-title>
+    <button ion-button menuToggle side="end">
+    </button>
   </ion-navbar>
 </ion-header>
 
+
 <ion-content>
+
   <ion-list>
     <button ion-item *ngFor="let hotel of hotels">
       <ion-avatar item-start>
@@ -17,4 +21,5 @@
       <p>{{hotel.address}}</p>
     </button>
   </ion-list>
+
 </ion-content>

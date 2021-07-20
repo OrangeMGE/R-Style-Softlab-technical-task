@@ -35,6 +35,123 @@ export class HotelsPage {
         hasParking: true,
         address: 'Москва, пр-т Мира, 150',
         phone: '8 (495) 234-12-06'
+      },
+      {
+        imageUrl: 'https://img.gazeta.ru/files3/837/4860837/hotel-pic668-668x444-62402.jpg',
+        title: 'Будапешт',
+        description: 'Московский отель "Будапешт"',
+        roomCost: 5000,
+        hasParking: true,
+        address: 'Москва, ул. Петровские Линии, 2',
+        phone: '8 (495) 729-35-01'
+      },
+      {
+        imageUrl: 'https://img.gazeta.ru/files3/837/4860837/hotel-pic668-668x444-62402.jpg',
+        title: 'Будапешт',
+        description: 'Московский отель "Будапешт"',
+        roomCost: 5000,
+        hasParking: true,
+        address: 'Москва, ул. Петровские Линии, 2',
+        phone: '8 (495) 729-35-01'
+      },
+      {
+        imageUrl: 'https://img.gazeta.ru/files3/837/4860837/hotel-pic668-668x444-62402.jpg',
+        title: 'Будапешт',
+        description: 'Московский отель "Будапешт"',
+        roomCost: 5000,
+        hasParking: true,
+        address: 'Москва, ул. Петровские Линии, 2',
+        phone: '8 (495) 729-35-01'
+      },
+      {
+        imageUrl: 'https://img.gazeta.ru/files3/837/4860837/hotel-pic668-668x444-62402.jpg',
+        title: 'Будапешт',
+        description: 'Московский отель "Будапешт"',
+        roomCost: 5000,
+        hasParking: true,
+        address: 'Москва, ул. Петровские Линии, 2',
+        phone: '8 (495) 729-35-01'
+      },
+      {
+        imageUrl: 'https://img.gazeta.ru/files3/837/4860837/hotel-pic668-668x444-62402.jpg',
+        title: 'Будапешт',
+        description: 'Московский отель "Будапешт"',
+        roomCost: 5000,
+        hasParking: true,
+        address: 'Москва, ул. Петровские Линии, 2',
+        phone: '8 (495) 729-35-01'
+      },
+      {
+        imageUrl: 'https://img.gazeta.ru/files3/837/4860837/hotel-pic668-668x444-62402.jpg',
+        title: 'Будапешт',
+        description: 'Московский отель "Будапешт"',
+        roomCost: 5000,
+        hasParking: true,
+        address: 'Москва, ул. Петровские Линии, 2',
+        phone: '8 (495) 729-35-01'
+      },
+      {
+        imageUrl: 'https://img.gazeta.ru/files3/837/4860837/hotel-pic668-668x444-62402.jpg',
+        title: 'Будапешт',
+        description: 'Московский отель "Будапешт"',
+        roomCost: 5000,
+        hasParking: true,
+        address: 'Москва, ул. Петровские Линии, 2',
+        phone: '8 (495) 729-35-01'
+      },
+      {
+        imageUrl: 'https://img.gazeta.ru/files3/837/4860837/hotel-pic668-668x444-62402.jpg',
+        title: 'Будапешт',
+        description: 'Московский отель "Будапешт"',
+        roomCost: 5000,
+        hasParking: true,
+        address: 'Москва, ул. Петровские Линии, 2',
+        phone: '8 (495) 729-35-01'
+      },
+      {
+        imageUrl: 'https://img.gazeta.ru/files3/837/4860837/hotel-pic668-668x444-62402.jpg',
+        title: 'Будапешт',
+        description: 'Московский отель "Будапешт"',
+        roomCost: 5000,
+        hasParking: true,
+        address: 'Москва, ул. Петровские Линии, 2',
+        phone: '8 (495) 729-35-01'
+      },
+      {
+        imageUrl: 'https://img.gazeta.ru/files3/837/4860837/hotel-pic668-668x444-62402.jpg',
+        title: 'Будапешт',
+        description: 'Московский отель "Будапешт"',
+        roomCost: 5000,
+        hasParking: true,
+        address: 'Москва, ул. Петровские Линии, 2',
+        phone: '8 (495) 729-35-01'
+      },
+      {
+        imageUrl: 'https://img.gazeta.ru/files3/837/4860837/hotel-pic668-668x444-62402.jpg',
+        title: 'Будапешт',
+        description: 'Московский отель "Будапешт"',
+        roomCost: 5000,
+        hasParking: true,
+        address: 'Москва, ул. Петровские Линии, 2',
+        phone: '8 (495) 729-35-01'
+      },
+      {
+        imageUrl: 'https://img.gazeta.ru/files3/837/4860837/hotel-pic668-668x444-62402.jpg',
+        title: 'Будапешт',
+        description: 'Московский отель "Будапешт"',
+        roomCost: 5000,
+        hasParking: true,
+        address: 'Москва, ул. Петровские Линии, 2',
+        phone: '8 (495) 729-35-01'
+      },
+      {
+        imageUrl: 'https://img.gazeta.ru/files3/837/4860837/hotel-pic668-668x444-62402.jpg',
+        title: 'Будапешт',
+        description: 'Московский отель "Будапешт"',
+        roomCost: 5000,
+        hasParking: true,
+        address: 'Москва, ул. Петровские Линии, 2',
+        phone: '8 (495) 729-35-01'
       }
     ]
   }
