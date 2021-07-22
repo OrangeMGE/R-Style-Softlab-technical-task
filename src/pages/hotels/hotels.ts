@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { MenuController, NavController } from 'ionic-angular';
+
 
 @Component({
   selector: 'page-hotels',
@@ -16,7 +17,9 @@ export class HotelsPage {
     phone: string
   }>;
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public menuCtrl: MenuController) {
+    menuCtrl.enable(true);
+
     this.hotels = [
       {
         imageUrl: 'https://img.gazeta.ru/files3/837/4860837/hotel-pic668-668x444-62402.jpg',
@@ -154,5 +157,7 @@ export class HotelsPage {
         phone: '8 (495) 729-35-01'
       }
     ]
-  }
+  } //Constructor end
+
+
 }

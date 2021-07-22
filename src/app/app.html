@@ -1,4 +1,4 @@
-<ion-menu [content]="content">
+<ion-menu [content]="content" id="mainMenu" side="start">
   <ion-header>
     <ion-toolbar>
       <ion-title>Меню</ion-title>
@@ -14,5 +14,22 @@
   </ion-content>
 
 </ion-menu>
+
+
+<ion-menu [content]="content" id="filterMenu" side="end">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Фильтр</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <button menuClose>Close Menu</button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
 
 <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

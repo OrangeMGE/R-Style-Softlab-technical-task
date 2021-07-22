@@ -11,6 +11,6 @@ export class HomePage {
   constructor(public navCtrl: NavController) { }
 
   hotelSelectionButton() {
-    this.navCtrl.push(HotelsPage)
+    this.navCtrl.setRoot(HotelsPage)
   }
 }

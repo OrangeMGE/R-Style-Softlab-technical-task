@@ -1,17 +1,19 @@
-<ion-header>
+<ion-header class="header-hotels">
   <ion-navbar>
-    <button ion-button menuToggle side="start">
+    
+    <button ion-button round>Round Button</button>
+
+    <button ion-button menuToggle menu="mainMenu" left>
       <ion-icon name="menu"></ion-icon>
     </button>
+
     <ion-title>Гостиницы</ion-title>
-    <button ion-button menuToggle side="end">
-    </button>
+  
   </ion-navbar>
 </ion-header>
 
 
 <ion-content>
-
   <ion-list>
     <button ion-item *ngFor="let hotel of hotels">
       <ion-avatar item-start>
@@ -23,3 +25,7 @@
   </ion-list>
 
 </ion-content>
+
+<!-- <div class="filterButton">
+  <button ion-button round>Round Button</button>
+</div> -->
