@@ -15,12 +15,14 @@ export class MyApp {
   rootPage: any = HomePage;
 
   pages: Array<{title: string, component: any}>;
+  
+  filterParams: Object; //ToDo
 
   constructor(
     public platform: Platform, 
     public statusBar: StatusBar, 
     public splashScreen: SplashScreen,
-    public menuCtrl: MenuController 
+    public menuCtrl: MenuController,
   ) {
 
     this.initializeApp();
@@ -41,5 +43,9 @@ export class MyApp {
 
   openPage(page) {
     this.nav.setRoot(page.component);
+  }
+
+  findHotels() {
+
   }
 }

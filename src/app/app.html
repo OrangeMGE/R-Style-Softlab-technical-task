@@ -25,7 +25,24 @@
 
   <ion-content>
     <ion-list>
-      <button menuClose>Close Menu</button>
+
+      <ion-item>
+        <ion-label>Цена от:</ion-label>
+        <ion-input type="number"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Цена до:</ion-label>
+        <ion-input type="number"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Парковка</ion-label>
+        <ion-toggle color="primary"></ion-toggle>
+      </ion-item>
+      
+      <div class="findButton">
+        <button ion-button menuClose color="primary" (click)="">Найти гостиницы</button>
+      </div>
+      
     </ion-list>
   </ion-content>
 

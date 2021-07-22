@@ -73,9 +73,10 @@ var HomePage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-home',template:/*ion-inline-start:"C:\Users\orang\Desktop\Projects\R-Style-Softlab-technical-task\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Главная</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h3>Система бронирования гостиниц</h3>\n\n  <button ion-button secondary (click)="hotelSelectionButton()">Подобрать гостиницу</button>\n</ion-content>\n'/*ion-inline-end:"C:\Users\orang\Desktop\Projects\R-Style-Softlab-technical-task\src\pages\home\home.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _a || Object])
     ], HomePage);
     return HomePage;
+    var _a;
 }());
 
 //# sourceMappingURL=home.js.map
@@ -118,9 +119,10 @@ var FilterPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-filter',template:/*ion-inline-start:"C:\Users\orang\Desktop\Projects\R-Style-Softlab-technical-task\src\pages\filter\filter.html"*/'<!--\n  Generated template for the FilterPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n'/*ion-inline-end:"C:\Users\orang\Desktop\Projects\R-Style-Softlab-technical-task\src\pages\filter\filter.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" && _b || Object])
     ], FilterPage);
     return FilterPage;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=filter.js.map
@@ -259,19 +261,19 @@ var MyApp = /** @class */ (function () {
     MyApp.prototype.openPage = function (page) {
         this.nav.setRoot(page.component);
     };
+    MyApp.prototype.findHotels = function () {
+    };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Nav */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Nav */])
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Nav */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Nav */]) === "function" && _a || Object)
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Users\orang\Desktop\Projects\R-Style-Softlab-technical-task\src\app\app.html"*/'<ion-menu [content]="content" id="mainMenu" side="start">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Меню</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        {{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n\n<ion-menu [content]="content" id="filterMenu" side="end">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Фильтр</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <button menuClose>Close Menu</button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>\n'/*ion-inline-end:"C:\Users\orang\Desktop\Projects\R-Style-Softlab-technical-task\src\app\app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"C:\Users\orang\Desktop\Projects\R-Style-Softlab-technical-task\src\app\app.html"*/'<ion-menu [content]="content" id="mainMenu" side="start">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Меню</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        {{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n\n<ion-menu [content]="content" id="filterMenu" side="end">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Фильтр</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n\n      <ion-item>\n        <ion-label>Цена от:</ion-label>\n        <ion-input type="number"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label>Цена до:</ion-label>\n        <ion-input type="number"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label>Парковка</ion-label>\n        <ion-toggle color="primary"></ion-toggle>\n      </ion-item>\n      \n      <div class="findButton">\n        <button ion-button menuClose color="primary" (click)="">Найти гостиницы</button>\n      </div>\n      \n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>\n'/*ion-inline-end:"C:\Users\orang\Desktop\Projects\R-Style-Softlab-technical-task\src\app\app.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */],
-            __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */],
-            __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* MenuController */]])
+        __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* MenuController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* MenuController */]) === "function" && _e || Object])
     ], MyApp);
     return MyApp;
+    var _a, _b, _c, _d, _e;
 }());
 
 //# sourceMappingURL=app.component.js.map
@@ -441,11 +443,12 @@ var HotelsPage = /** @class */ (function () {
     } //Constructor end
     HotelsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-hotels',template:/*ion-inline-start:"C:\Users\orang\Desktop\Projects\R-Style-Softlab-technical-task\src\pages\hotels\hotels.html"*/'<ion-header class="header-hotels">\n  <ion-navbar>\n    \n    <button ion-button round>Round Button</button>\n\n    <button ion-button menuToggle menu="mainMenu" left>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n\n    <ion-title>Гостиницы</ion-title>\n  \n  </ion-navbar>\n</ion-header>\n\n\n<ion-content>\n  <ion-list>\n    <button ion-item *ngFor="let hotel of hotels">\n      <ion-avatar item-start>\n        <img src="{{hotel.imageUrl}}">\n      </ion-avatar>\n      <h2>{{hotel.title}}</h2>\n      <p>{{hotel.address}}</p>\n    </button>\n  </ion-list>\n\n</ion-content>\n\n<!-- <div class="filterButton">\n  <button ion-button round>Round Button</button>\n</div> -->\n'/*ion-inline-end:"C:\Users\orang\Desktop\Projects\R-Style-Softlab-technical-task\src\pages\hotels\hotels.html"*/
+            selector: 'page-hotels',template:/*ion-inline-start:"C:\Users\orang\Desktop\Projects\R-Style-Softlab-technical-task\src\pages\hotels\hotels.html"*/'<ion-header class="header-hotels">\n  <ion-navbar>\n\n\n\n    <button ion-button menuToggle="left" menu="mainMenu" start>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n\n    <ion-title>Гостиницы</ion-title>\n  \n    <button ion-button menuToggle="right" menu="filterMenu" end>\n      <ion-icon name="construct-outline"></ion-icon>\n    </button>\n\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content>\n  <ion-list>\n    <button ion-item *ngFor="let hotel of hotels">\n      <ion-avatar item-start>\n        <img src="{{hotel.imageUrl}}">\n      </ion-avatar>\n      <h2>{{hotel.title}}</h2>\n      <p>{{hotel.address}}</p>\n    </button>\n  </ion-list>\n\n</ion-content>\n\n<!-- <div class="filterButton">\n  <button ion-button round>Round Button</button>\n</div> -->\n'/*ion-inline-end:"C:\Users\orang\Desktop\Projects\R-Style-Softlab-technical-task\src\pages\hotels\hotels.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* MenuController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* MenuController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* MenuController */]) === "function" && _b || Object])
     ], HotelsPage);
     return HotelsPage;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=hotels.js.map
