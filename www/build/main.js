@@ -402,11 +402,6 @@ var HotelsPage = /** @class */ (function () {
         this.navCtrl = navCtrl;
         this.menuCtrl = menuCtrl;
         this.modalCtrl = modalCtrl;
-        this.filterArgs = {
-            min_pay: 0,
-            max_pay: 0,
-            parking: true
-        };
         menuCtrl.enable(true);
         this.hotels = [
             {
@@ -437,11 +432,6 @@ var HotelsPage = /** @class */ (function () {
                 phone: '8 (495) 729-35-01'
             }
         ];
-        this.filterArgs = {
-            min_pay: 0,
-            max_pay: 0,
-            parking: true
-        };
         this.allhotels = this.hotels.slice();
     } //Constructor end
     // @Input() price_from: number = 0;
@@ -469,14 +459,11 @@ var HotelsPage = /** @class */ (function () {
     HotelsPage.prototype.findHotels = function (f) {
         var _this = this;
         console.log(f.value);
-        this.filterArgs = __assign({}, f.value);
-        // console.log(typeof (this.filterArgs.max_pay));
-        // console.log(Boolean(this.filterArgs.max_pay));
-        if (Boolean(this.filterArgs.max_pay) && Boolean(this.filterArgs.min_pay) && Boolean(this.filterArgs.parking)) {
+        if (Boolean(f.value.max_pay) && Boolean(f.value.min_pay)) {
             this.hotels.splice(0, this.hotels.length);
             this.allhotels.forEach(function (element) {
-                if (element.roomCost >= _this.filterArgs.min_pay && element.roomCost <= _this.filterArgs.max_pay) {
-                    if (element.hasParking == _this.filterArgs.parking) {
+                if (element.roomCost >= f.value.min_pay && element.roomCost <= f.value.max_pay) {
+                    if (element.hasParking == f.value.parking) {
                         _this.hotels.push(element);
                     }
                 }

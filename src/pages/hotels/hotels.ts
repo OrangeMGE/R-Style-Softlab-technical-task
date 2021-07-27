@@ -28,12 +28,6 @@ export class HotelsPage {
     phone: string
   }>;
 
-  filterArgs = {
-    min_pay: 0,
-    max_pay: 0,
-    parking: true
-  };
-
   constructor(public navCtrl: NavController, public menuCtrl: MenuController, public modalCtrl: ModalController) {
     menuCtrl.enable(true);
 
@@ -67,11 +61,6 @@ export class HotelsPage {
       }
     ]
 
-    this.filterArgs = {
-      min_pay: 0,
-      max_pay: 0,
-      parking: true
-    }
     this.allhotels = [...this.hotels];
   } //Constructor end
 
@@ -91,17 +80,12 @@ export class HotelsPage {
   findHotels(f: NgForm) {
     console.log(f.value);
 
-    this.filterArgs = { ...f.value };
-    
-    // console.log(typeof (this.filterArgs.max_pay));
-    // console.log(Boolean(this.filterArgs.max_pay));
-
-
-    if (Boolean(this.filterArgs.max_pay) && Boolean(this.filterArgs.min_pay) && Boolean(this.filterArgs.parking)) {
-      this.hotels.splice(0, this.hotels.length);
+    if (Boolean(f.value.max_pay) && Boolean(f.value.min_pay)) {
+      this.hotels.splice(0, this.hotels.length); 
+      
       this.allhotels.forEach(element => {
-        if (element.roomCost >= this.filterArgs.min_pay && element.roomCost <= this.filterArgs.max_pay) {
-          if (element.hasParking == this.filterArgs.parking) {
+        if (element.roomCost >= f.value.min_pay && element.roomCost <= f.value.max_pay) {
+          if (element.hasParking == f.value.parking) {
             this.hotels.push(element)
           }
         }
