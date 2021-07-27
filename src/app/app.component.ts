@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { HotelsPage } from '../pages/hotels/hotels';
+import { NgForm } from '@angular/forms';
 
 @Component({
   templateUrl: 'app.html'
@@ -15,8 +16,10 @@ export class MyApp {
   rootPage: any = HomePage;
 
   pages: Array<{title: string, component: any}>;
-  
-  filterParams: Object; //ToDo
+
+  inputPrice_from: number;
+  inputPrice_upto: number;
+  inputParking: boolean;
 
   constructor(
     public platform: Platform, 
@@ -31,7 +34,6 @@ export class MyApp {
       { title: 'Главная', component: HomePage },
       { title: 'Гостиницы', component: HotelsPage }
     ];
-
   } // Constructor end
 
   initializeApp() {
@@ -45,7 +47,13 @@ export class MyApp {
     this.nav.setRoot(page.component);
   }
 
-  findHotels() {
 
-  }
+
 }
+
+// export class FilterParams {
+//   constructor(public priceFrom: number,
+//               public priceTo: number,
+//               public parking: boolean
+//   ) {};
+// }                      ~TODO~
