@@ -3,30 +3,24 @@ import { IonicPage, MenuController, ModalController, NavController } from 'ionic
 import { HotelPage } from './hotel/hotel';
 import { NgForm } from '@angular/forms';
 
+interface Hotel {
+  imageUrl: string,
+  title: string,
+  description: string,
+  roomCost: number,
+  hasParking: boolean,
+  address: string,
+  phone: string
+}
+
 @Component({
   selector: 'page-hotels',
   templateUrl: 'hotels.html'
 })
 export class HotelsPage {
-  hotels: Array<{
-    imageUrl: string,
-    title: string,
-    description: string,
-    roomCost: number,
-    hasParking: boolean,
-    address: string,
-    phone: string
-  }>;
 
-  allhotels: Array<{
-    imageUrl: string,
-    title: string,
-    description: string,
-    roomCost: number,
-    hasParking: boolean,
-    address: string,
-    phone: string
-  }>;
+  hotels: Array<Hotel>;
+  allhotels: Array<Hotel>;
 
   constructor(public navCtrl: NavController, public menuCtrl: MenuController, public modalCtrl: ModalController) {
     menuCtrl.enable(true);
@@ -65,30 +59,38 @@ export class HotelsPage {
   } //Constructor end
 
   // @Input() price_from: number = 0;
-  // @Input() price_upto: number = 0;      ~TODO~
+  // @Input() price_upto: number = 0;      ~???~
   // @Input() parking: boolean = true;
-
-  async openPage(props) {
-    console.log(props);
-    const modalPage = await this.modalCtrl.create({
-      component: HotelPage,
-      componentProps: { ...props }
-    });
-    return await modalPage.present();
-  }
+  //                                       Modal Page 
+  // async openPage(props) {
+  //   console.log(props);
+  //   const modalPage = await this.modalCtrl.create({
+  //     component: HotelPage,
+  //     componentProps: { ...props }
+  //   });
+  //   return await modalPage.present();
+  // }
 
   findHotels(f: NgForm) {
     console.log(f.value);
 
     if (Boolean(f.value.max_pay) && Boolean(f.value.min_pay)) {
-      this.hotels.splice(0, this.hotels.length); 
+      // this.hotels.splice(0, this.hotels.length);
+
+      // this.allhotels.forEach(element => {
+      //   if (element.roomCost >= f.value.min_pay && element.roomCost <= f.value.max_pay) {
+      //     if (element.hasParking == f.value.parking) {
+      //       this.hotels.push(element)
+      //     }
+      //   }
+      // });
+
       
-      this.allhotels.forEach(element => {
-        if (element.roomCost >= f.value.min_pay && element.roomCost <= f.value.max_pay) {
-          if (element.hasParking == f.value.parking) {
-            this.hotels.push(element)
-          }
-        }
+      this.hotels = this.allhotels.filter( (hotel) => { 
+        //console.log(this.hotels[0].hasParking == f.value.parking);
+        return ( hotel.roomCost >= f.value.min_pay && 
+                 hotel.roomCost <= f.value.max_pay && 
+                 hotel.hasParking == f.value.parking );
       });
     }
   }
