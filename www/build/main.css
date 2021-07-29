@@ -25689,3 +25689,18 @@ ion-navbar.toolbar {
   justify-content: center;
   margin-top: 0.5em;
 }
+
+.header-title {
+  text-align: center;
+}
+
+.contact-button {
+  display: block;
+  width: 100%;
+}
+
+.img-hotel {
+  border-radius: 2em;
+  width: 100%;
+  height: 40vh;
+}

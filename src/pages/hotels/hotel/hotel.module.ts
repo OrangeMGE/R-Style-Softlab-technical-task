@@ -5,11 +5,10 @@ import { HotelPage } from './hotel';
 
 @NgModule({
   declarations: [
-    HotelPage,
     HotelsPage
   ],
   entryComponents: [
-    HotelsPage
+    HotelPage
   ],
   imports: [
     IonicPageModule.forChild(HotelPage),

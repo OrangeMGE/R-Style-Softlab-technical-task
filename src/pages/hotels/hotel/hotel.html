@@ -7,12 +7,37 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>hotel</ion-title>
+    <ion-title> {{hotelParams.title}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <ion-list>
 
+    <ion-avatar item-start>
+      <img class="img-hotel" src="{{hotelParams.imageUrl}}">
+    </ion-avatar>
+
+    <h5 ion-text>
+      {{hotelParams.description}}
+      <br>
+      {{hotelParams.roomCost}}&#8381; за номер
+    </h5>
+
+    <button ion-button class="contact-button" (click)="showNumber()">
+      <ion-icon name="call"></ion-icon> Связаться
+    </button>
+
+    <h6>{{hotelParams.address}}</h6>
+
+    <ion-item>
+      <p>Наличие паркинга:</p>
+      <span *ngIf="hotelParams.hasParking; else dontHave">Да</span>
+      <ng-template #dontHave>Нет</ng-template>
+    </ion-item>
+
+
+  </ion-list>
 </ion-content>
