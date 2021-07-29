@@ -4,7 +4,7 @@ import { HotelPage } from './hotel/hotel';
 import { NgForm } from '@angular/forms';
 
 
-interface Hotel {
+export interface Hotel {
   imageUrl: string,
   title: string,
   description: string,

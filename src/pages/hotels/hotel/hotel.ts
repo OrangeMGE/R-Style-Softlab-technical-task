@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AlertController, IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Hotel } from '../hotels';
 /**
  * Generated class for the HotelPage page.
  *
@@ -13,7 +14,7 @@ import { AlertController, IonicPage, NavController, NavParams } from 'ionic-angu
   templateUrl: 'hotel.html',
 })
 export class HotelPage {
-  hotelParams: object;
+  hotelParams: Hotel;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertController: AlertController) {
     this.hotelParams = ({ ...navParams.data });
